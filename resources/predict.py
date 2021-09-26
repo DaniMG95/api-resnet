@@ -1,5 +1,4 @@
 from flask_restful import Resource, reqparse
-import os
 from models.predictUrl import PredictUrlModel
 
 class PredictImage(Resource):
