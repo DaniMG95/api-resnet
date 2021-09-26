@@ -1,0 +1,31 @@
+version: "3.9"
+
+networks:
+  server:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
+
+services:
+  api:
+    build: .
+    networks:
+      server:
+        ipv4_address: 172.20.0.5
+    ports:
+      - "5000:5000"
+    environment:
+      - server=172.20.0.4:8501
+    links:
+      - model
+  model:
+    image: tensorflow/serving
+    networks:
+      server:
+        ipv4_address: 172.20.0.4
+    volumes:
+      - C:\Users\dani_\Desktop\project/tmp/resnet:/models/resnet
+    environment:
+      - MODEL_NAME=resnet
+    ports:
+      - "8501:8501"
