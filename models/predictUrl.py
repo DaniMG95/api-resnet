@@ -1,6 +1,6 @@
 import base64
 import requests
-from lib.predict import Predict
+from models.predict import Predict
 from flask import abort
 
 

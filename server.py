@@ -4,7 +4,7 @@ from flask_restful import Api
 from resources.predict import PredictImage, PredictURL
 
 
-def create_api():
+def create_app():
     _app = Flask(__name__)
     api = Api(_app, prefix='/api/')
     CORS(_app)
@@ -14,5 +14,5 @@ def create_api():
 
 
 if __name__ == '__main__':
-    app = create_api()
-    app.run(debug=True)
+    app = create_app()
+    app.run(host='0.0.0.0')
