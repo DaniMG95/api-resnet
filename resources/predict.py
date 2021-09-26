@@ -7,7 +7,7 @@ class PredictImage(Resource):
     parser.add_argument('img', type=str, help='img to charge for this resource', required=True)
 
     @classmethod
-    def get(cls):
+    def post(cls):
         image_base64 = cls.parser.parse_args()['img']
         predictor = PredictUrlModel(image_base64)
         return {"class": predictor.predict_image()}
@@ -18,7 +18,7 @@ class PredictURL(Resource):
     parser.add_argument('url', type=str, help='URl image to charge for this resource', required=True)
 
     @classmethod
-    def get(cls):
+    def post(cls):
         url_image = cls.parser.parse_args()['url']
         predictor = PredictUrlModel(url_image)
         return {"class": predictor.predict_image()}
