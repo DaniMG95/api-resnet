@@ -3,6 +3,7 @@ from flask_cors import CORS
 from flask_restful import Api
 from resources.predict import PredictImage, PredictURL
 
+
 def create_api():
     _app = Flask(__name__)
     api = Api(_app, prefix='/api/')
@@ -11,7 +12,7 @@ def create_api():
     api.add_resource(PredictURL, '/url/')
     return _app
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
     app = create_api()
     app.run(debug=True)
