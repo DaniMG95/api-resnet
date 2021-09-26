@@ -2,6 +2,7 @@ from flask_restful import Resource, reqparse
 from models.predictUrl import PredictUrlModel
 
 
+
 class PredictImage(Resource):
     parser = reqparse.RequestParser()
     parser.add_argument('img', type=str, help='img to charge for this resource', required=True)
