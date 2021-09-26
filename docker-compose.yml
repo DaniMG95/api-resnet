@@ -24,7 +24,7 @@ services:
       server:
         ipv4_address: 172.20.0.4
     volumes:
-      - C:\Users\dani_\Desktop\project/tmp/resnet:/models/resnet
+      - /tmp/resnet:/models/resnet
     environment:
       - MODEL_NAME=resnet
     ports:
