@@ -13,7 +13,7 @@ In case of error, all APIs will return a JSON object in the response body with e
 }
 ```
 
-##Instructions  
+## Instructions  
 To deploy this API in docker it is necessary to have docker and docker-compose installed, to install it follow these steps.
  - [docker](https://docs.docker.com/get-docker/)
  - [docker-compose](https://docs.docker.com/compose/install/)
@@ -40,22 +40,22 @@ python3 server.py
 
 
 
-##EndPoints
+## EndPoints
 
 These are the endpoints that are available in the API 
 
-###POST /api/image/
+### POST /api/image/
 This endpoint is passed in the body an image in base64 format and will give an output with the class it belongs to and the average time it has taken to classify it. 
 average time it has taken to classify it.
 
-####Input
+#### Input
 ```
 {
     "img":"base64_img"
 }
 ```
 
-####Output
+#### Output
 ```
 {
     "class": {
@@ -66,7 +66,7 @@ average time it has taken to classify it.
 ```
 
 
-###POST /api/url/
+### POST /api/url/
 
 This endpoint is passed a url of an image in the body and will give an output with the class that belongs to an image. 
 average time it has taken to classify it 10 times.
@@ -77,7 +77,7 @@ average time it has taken to classify it 10 times.
 }
 ```
 
-####Output
+#### Output
 ```
 {
     "class": {
@@ -88,7 +88,7 @@ average time it has taken to classify it 10 times.
 ```
 
 
-##Example
+## Example
 
 I will now show an example of the call to the /api/url/ endpoint.
 
