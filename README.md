@@ -13,7 +13,7 @@ In case of error, all APIs will return a JSON object in the response body with e
 }
 ```
 
-##Instructions
+##Instructions  
 To deploy this API in docker it is necessary to have docker and docker-compose installed, to install it follow these steps.
  - [docker](https://docs.docker.com/get-docker/)
  - [docker-compose](https://docs.docker.com/compose/install/)
