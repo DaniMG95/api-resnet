@@ -4,11 +4,13 @@ from flask import abort
 
 
 class Predict:
-
+    """Class that is in charge of making calls to the resnet model"""
     def __init__(self):
+        """Initialiser of the Predict class it is necessary to have the environment variable server"""
         self.SERVER_URL = f"http://{os.getenv('server')}/v1/models/resnet:predict"
 
     def predict(self, image):
+        """Function that is in charge of calling get from the model to return the prediction of the object."""
         try:
             response = requests.post(self.SERVER_URL, data=image)
             response.raise_for_status()

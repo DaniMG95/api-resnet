@@ -5,6 +5,7 @@ from resources.predict import PredictImage, PredictURL
 
 
 def create_app():
+    """Function that takes care of the creation of the API with its respective endpoints."""
     _app = Flask(__name__)
     api = Api(_app, prefix='/api/')
     CORS(_app)
