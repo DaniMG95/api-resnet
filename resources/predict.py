@@ -1,15 +1,17 @@
 from flask_restful import Resource, reqparse
 from models.predictUrl import PredictUrlModel
+from models.predictImage import PredictImageModel
 
 
 class PredictImage(Resource):
+
     parser = reqparse.RequestParser()
     parser.add_argument('img', type=str, help='img to charge for this resource', required=True)
 
     @classmethod
     def post(cls):
         image_base64 = cls.parser.parse_args()['img']
-        predictor = PredictUrlModel(image_base64)
+        predictor = PredictImageModel(image_base64)
         return {"class": predictor.predict_image()}
 
 

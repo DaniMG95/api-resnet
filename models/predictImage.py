@@ -1,4 +1,4 @@
-from lib.predict import Predict
+from models.predict import Predict
 
 
 class PredictImageModel(Predict):
@@ -9,5 +9,4 @@ class PredictImageModel(Predict):
 
     def predict_image(self):
         predict_request = '{"instances" : [{"b64": "%s"}]}' % self.image_base64
-        # Send few requests to warm-up the model.
         return self.predict(predict_request)
