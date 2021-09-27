@@ -18,7 +18,7 @@ To deploy this API in docker it is necessary to have docker and docker-compose i
  - [docker](https://docs.docker.com/get-docker/)
  - [docker-compose](https://docs.docker.com/compose/install/)
 
-After installation it is only necessary to go to the path where we have the cloned repository and execute the following commands
+After installation it is only necessary to go to the path where we have the cloned repository and execute the following commands.  
 It would be necessary before doing the docker-compose up, to change the docker-compose file in the part of 
 /tmp/resnet:/models/resnet to path_resnet:/models/resnet, where path_resnet is where you are going to decompress the resnet model.
 
